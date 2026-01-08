@@ -4,9 +4,9 @@ class Database {
     public static function getConnect() {
             try {
                 self::$pdo = new PDO(
-                    "pgsql:host=dpg-d5eu6bh5pdvs73fpt0ng-a.render.com;port=5432;dbname=testdb123_0g96", 
-                    "postgres222", 
-                    "Us34WTS8rFs5G3P6zXFOxM5JLQkzYFX9",         
+                    "pgsql:host=localhost;port=5432;dbname=TestDB", 
+                    "postgres", 
+                    "postgres123",         
                     [
                         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
@@ -18,5 +18,3 @@ class Database {
         return self::$pdo;
     }
 }
-
-Database::getConnect();
